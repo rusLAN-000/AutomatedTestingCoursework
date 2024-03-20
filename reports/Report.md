@@ -1,12 +1,1 @@
-![833a19f7a5e10647a9c48ad17e2a227d-5](https://github.com/rusLAN-000/AutomatedTestingCoursework/assets/130086623/518501bd-49f9-4bbf-a944-b4bd55278268)
-![833a19f7a5e10647a9c48ad17e2a227d-4](https://github.com/rusLAN-000/AutomatedTestingCoursework/assets/130086623/766b33d1-d7fd-4329-a2d5-b12a4467de36)
-![833a19f7a5e10647a9c48ad17e2a227d-3](https://github.com/rusLAN-000/AutomatedTestingCoursework/assets/130086623/d9b12904-8710-4994-aaf6-8a921b097704)
-![833a19f7a5e10647a9c48ad17e2a227d-2](https://github.com/rusLAN-000/AutomatedTestingCoursework/assets/130086623/fe4ab938-e8eb-4fd7-bfd8-48a75ea0c741)
-![833a19f7a5e10647a9c48ad17e2a227d-1](https://github.com/rusLAN-000/AutomatedTestingCoursework/assets/130086623/ab54a5ea-9298-4e73-9920-0a77f8e8abb3)
-![833a19f7a5e10647a9c48ad17e2a227d-11](https://github.com/rusLAN-000/AutomatedTestingCoursework/assets/130086623/be8d607e-bee9-4217-b069-93d4ecafcc3c)
-![833a19f7a5e10647a9c48ad17e2a227d-10](https://github.com/rusLAN-000/AutomatedTestingCoursework/assets/130086623/466369b0-443b-4c1b-b6a7-2f613086daab)
-![833a19f7a5e10647a9c48ad17e2a227d-0](https://github.com/rusLAN-000/AutomatedTestingCoursework/assets/130086623/d6216531-a5fb-4830-b39e-f773d69cbc1f)
-![833a19f7a5e10647a9c48ad17e2a227d-9](https://github.com/rusLAN-000/AutomatedTestingCoursework/assets/130086623/76eba019-fec0-46c6-8964-898d3d80415c)
-![833a19f7a5e10647a9c48ad17e2a227d-8](https://github.com/rusLAN-000/AutomatedTestingCoursework/assets/130086623/98596790-0274-4c8e-92e4-bd204bf7c4d9)
-![833a19f7a5e10647a9c48ad17e2a227d-7](https://github.com/rusLAN-000/AutomatedTestingCoursework/assets/130086623/0af89365-c370-491d-95d8-a3fa1d447ea7)
-![833a19f7a5e10647a9c48ad17e2a227d-6](https://github.com/rusLAN-000/AutomatedTestingCoursework/assets/130086623/cde767ae-796e-4486-816a-72d1b2dcf1d6)
+
