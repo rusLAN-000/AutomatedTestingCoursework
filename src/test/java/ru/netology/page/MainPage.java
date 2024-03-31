@@ -16,4 +16,6 @@ public class MainPage {
         buyButton.click();
         return new BuyPage();
     }
+
+
 }

@@ -9,6 +9,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class SQLHelper {
+
     private static final QueryRunner runner = new QueryRunner();
 
     private SQLHelper() {
@@ -25,5 +26,5 @@ public class SQLHelper {
         var status = runner.query(conn, codeSQL, new ScalarHandler<String>());
         return status;
     }
-}
 
+}
