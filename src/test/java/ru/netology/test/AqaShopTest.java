@@ -38,7 +38,7 @@ public class AqaShopTest {
     }
 
     @Test
-    void successPathDeclinedCard() {
+    void successPathDeclinedCard() throws InterruptedException {
         open("http://localhost:8080");
         var mainPage = new MainPage();
         var buyPage = mainPage.simpleBuy();
@@ -49,13 +49,14 @@ public class AqaShopTest {
     }
 
     @Test
-    void cardNumberEmpty() {
+    void cardNumberEmpty() throws InterruptedException {
         open("http://localhost:8080");
         var mainPage = new MainPage();
         var buyPage = mainPage.simpleBuy();
         var cardInfo = DataHelper.getApprovedCardAllForm();
         buyPage.formCardArbitraryNumber(cardInfo, "");
         buyPage.findMessageError("number", "Поле обязательно для заполнения");
+
     }
 
     @Test
@@ -123,13 +124,14 @@ public class AqaShopTest {
     }
 
     @Test
-    void cardMonthEmpty() {
+    void cardMonthEmpty() throws InterruptedException {
         open("http://localhost:8080");
         var mainPage = new MainPage();
         var buyPage = mainPage.simpleBuy();
         var cardInfo = DataHelper.getApprovedCardAllForm();
         buyPage.formCardArbitraryMonth(cardInfo, "");
         buyPage.findMessageError("month", "Поле обязательно для заполнения");
+
     }
 
     @Test
@@ -143,13 +145,15 @@ public class AqaShopTest {
     }
 
     @Test
-    void cardMonthZero() {
+    void cardMonthZero() throws InterruptedException {
         open("http://localhost:8080");
         var mainPage = new MainPage();
         var buyPage = mainPage.simpleBuy();
         var cardInfo = DataHelper.getApprovedCardAllForm();
         buyPage.formCardArbitraryMonth(cardInfo, "00");
+
         buyPage.findMessageError("month", "Неверный формат");
+
     }
 
     @Test
@@ -237,7 +241,7 @@ public class AqaShopTest {
     }
 
     @Test
-    void cardYearEmpty() {
+    void cardYearEmpty() throws InterruptedException {
         open("http://localhost:8080");
         var mainPage = new MainPage();
         var buyPage = mainPage.simpleBuy();
@@ -351,7 +355,7 @@ public class AqaShopTest {
     }
 
     @Test
-    void cardOwnerCyrillic() {
+    void cardOwnerCyrillic() throws InterruptedException {
         open("http://localhost:8080");
         var mainPage = new MainPage();
         var buyPage = mainPage.simpleBuy();
@@ -362,7 +366,7 @@ public class AqaShopTest {
     }
 
     @Test
-    void cardOwnerNumeric() {
+    void cardOwnerNumeric() throws InterruptedException {
         open("http://localhost:8080");
         var mainPage = new MainPage();
         var buyPage = mainPage.simpleBuy();
@@ -373,7 +377,7 @@ public class AqaShopTest {
     }
 
     @Test
-    void cardOwnerSymbol() {
+    void cardOwnerSymbol() throws InterruptedException {
         open("http://localhost:8080");
         var mainPage = new MainPage();
         var buyPage = mainPage.simpleBuy();
@@ -384,7 +388,7 @@ public class AqaShopTest {
     }
 
     @Test
-    void cardOwnerTwentyTwoSymbol() {
+    void cardOwnerTwentyTwoSymbol() throws InterruptedException {
         open("http://localhost:8080");
         var mainPage = new MainPage();
         var buyPage = mainPage.simpleBuy();
@@ -395,10 +399,9 @@ public class AqaShopTest {
     }
 
     @Test
-    void cardOwnerNotWhitespace() {
+    void cardOwnerNotWhitespace() throws InterruptedException {
         open("http://localhost:8080");
         var mainPage = new MainPage();
-        ;
         var buyPage = mainPage.simpleBuy();
         var cardInfo = DataHelper.getApprovedCardAllForm();
         buyPage.formCardArbitraryOwner(cardInfo, DataHelper.generateInvalidLatinData(14));
@@ -406,7 +409,7 @@ public class AqaShopTest {
     }
 
     @Test
-    void cardCodeEmpty() {
+    void cardCodeEmpty() throws InterruptedException {
         open("http://localhost:8080");
         var mainPage = new MainPage();
         var buyPage = mainPage.simpleBuy();
@@ -554,7 +557,7 @@ public class AqaShopTest {
 
     // дополнительные негативные тесты
     @Test
-    void cardOwnerFirstWhitespace() {
+    void cardOwnerFirstWhitespace() throws InterruptedException {
         open("http://localhost:8080");
         var mainPage = new MainPage();
         var buyPage = mainPage.simpleBuy();
@@ -565,7 +568,7 @@ public class AqaShopTest {
     }
 
     @Test
-    void cardOwnerFirstDash() {
+    void cardOwnerFirstDash() throws InterruptedException {
         open("http://localhost:8080");
         var mainPage = new MainPage();
         var buyPage = mainPage.simpleBuy();
@@ -576,7 +579,7 @@ public class AqaShopTest {
     }
 
     @Test
-    void cardOwnerManyWhitespace() {
+    void cardOwnerManyWhitespace() throws InterruptedException {
         open("http://localhost:8080");
         var mainPage = new MainPage();
         var buyPage = mainPage.simpleBuy();
