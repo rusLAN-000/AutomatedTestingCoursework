@@ -57,6 +57,15 @@ public class DataHelper {
         return result;
     }
 
+    public static String generateRussianOwner() {
+        String firstName = faker.name().firstName();
+        String lastName = faker.name().lastName();
+        String result = (firstName + " " + lastName);
+        result = result.replaceAll("ʹ", "");
+        return result;
+
+    }
+
     public static String generateCode() {
         String code = "";
         for (int i = 0; i <= 2; i++) {
@@ -74,6 +83,10 @@ public class DataHelper {
         String year;
         String owner;
         String code;
+    }
+
+    public static CardInfo getInvalidCardWithRussianOwner() {
+        return new CardInfo(getApprovedCard(), generateMonth(), generateYear(), generateRussianOwner(), generateCode());
     }
 
     public static CardInfo getApprovedCardAllForm() {

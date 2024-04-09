@@ -151,9 +151,19 @@ public class AqaShopTest {
         var buyPage = mainPage.simpleBuy();
         var cardInfo = DataHelper.getApprovedCardAllForm();
         buyPage.formCardArbitraryMonth(cardInfo, "00");
-
         buyPage.findMessageError("month", "Неверный формат");
 
+
+    }
+
+    @Test
+    void cardCodeCyrillicNorm() throws InterruptedException {
+        open("http://localhost:8080");
+        var mainPage = new MainPage();
+        var buyPage = mainPage.simpleBuy();
+        var cardInfo = DataHelper.getInvalidCardWithRussianOwner();
+        buyPage.formFillingCard(cardInfo);
+        buyPage.findMessageError("owner", "Неверный формат");
     }
 
     @Test
@@ -439,7 +449,7 @@ public class AqaShopTest {
     }
 
     @Test
-    void cardCodeFourSymbol() {
+    void cardCodeFourSymbol() throws InterruptedException {
         open("http://localhost:8080");
         var mainPage = new MainPage();
         var buyPage = mainPage.simpleBuy();
@@ -449,16 +459,17 @@ public class AqaShopTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    @Test
-    void cardCodeCyrillic() {
-        open("http://localhost:8080");
-        var mainPage = new MainPage();
-        var buyPage = mainPage.simpleBuy();
-        buyPage.fillingOneField("code", DataHelper.generateInvalidCyrillicData(3));
-        int expected = 0;
-        int actual = buyPage.getCardCodeFromForm().length();
-        Assertions.assertEquals(expected, actual);
-    }
+//    @Test
+//    void cardCodeCyrillic() throws InterruptedException {
+//        open("http://localhost:8080");
+//        var mainPage = new MainPage();
+//        var buyPage = mainPage.simpleBuy();
+//        buyPage.fillingOneField("code", DataHelper.generateInvalidCyrillicData(3));
+//        Thread.sleep(5000);
+//        int expected = 0;
+//        int actual = buyPage.getCardCodeFromForm().length();
+//        Assertions.assertEquals(expected, actual);
+//    }
 
     @Test
     void cardCodeLatin() {

@@ -149,15 +149,19 @@ public class BuyPage {
     public String getCardNumberFromForm() {
         return cardNumber.getValue();
     }
+
     public String getCardMonthFromForm() {
         return cardMonth.getValue();
     }
+
     public String getCardYearFromForm() {
         return cardYear.getValue();
     }
+
     public String getCardOwnerFromForm() {
         return cardOwner.getValue();
     }
+
     public String getCardCodeFromForm() {
         return cardCode.getValue();
     }
