@@ -40,6 +40,17 @@ public class AqaShopTest {
         buyPage.findMessageContent("Успешно", "Операция одобрена Банком.");
         Assertions.assertEquals("APPROVED", SQLHelper.getStatus());
     }
+    @Test
+    void cardOwnerCyrillic() {
+        var mainPage = new MainPage();
+        var buyPage = mainPage.simpleBuy();
+        buyPage.fillingOneField("owner", DataHelper.generateInvalidOwnerCyrillic(5, 8));
+        int expected = 14;
+        int actual = buyPage.getCardOwnerFromForm().length();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
 
     @Test
     void successPathDeclinedCard() {
