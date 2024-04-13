@@ -31,12 +31,17 @@ public class DataHelper {
     }
 
     public static String generateYear() {
-        var year = new String[]{LocalDate.now().plusYears(1).format(DateTimeFormatter.ofPattern("yy")),
-                LocalDate.now().plusYears(2).format(DateTimeFormatter.ofPattern("yy")),
-                LocalDate.now().plusYears(3).format(DateTimeFormatter.ofPattern("yy")),
-                LocalDate.now().plusYears(4).format(DateTimeFormatter.ofPattern("yy")),
-                LocalDate.now().plusYears(5).format(DateTimeFormatter.ofPattern("yy"))};
-        return year[new Random().nextInt(year.length)];
+        int minYear = 24;
+        int maxYear = 29;
+        int year = (int) (Math.random() * (maxYear - minYear + 1)) + minYear;
+        LocalDate.now().plusYears(1).format(DateTimeFormatter.ofPattern("yy"));
+//        var year = new String[]{LocalDate.now().plusYears(1).format(DateTimeFormatter.ofPattern("yy")),
+//                LocalDate.now().plusYears(2).format(DateTimeFormatter.ofPattern("yy")),
+//                LocalDate.now().plusYears(3).format(DateTimeFormatter.ofPattern("yy")),
+//                LocalDate.now().plusYears(4).format(DateTimeFormatter.ofPattern("yy")),
+//                LocalDate.now().plusYears(5).format(DateTimeFormatter.ofPattern("yy"))};
+//        return year[new Random().nextInt(year.length)];
+        return Integer.toString(year);
     }
 
     public static String getCurrentMonth() {
