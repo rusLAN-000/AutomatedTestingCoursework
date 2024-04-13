@@ -7,6 +7,7 @@ jobs:
 
     runs-on: ubuntu-latest
 
+
     steps:
       - uses: actions/checkout@v2
       - name: Set up JDK 11
@@ -16,6 +17,8 @@ jobs:
           distribution: 'adopt'
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
+        services:
+          docker-compose up &
       - name: Start SUT
         # Запускаем SUT,
         # имя файла SUT будет отличаться в каждой задаче.
